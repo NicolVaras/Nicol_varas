@@ -4,7 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Faro - Periódico Local</title>
-    <link rel="stylesheet" href="style.css"> <!-- Enlazar CSS si es necesario -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header, footer {
+            background-color: #c9d2d0;
+            color: #31231e;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav li {
+            margin: 0 10px;
+        }
+        
+        nav a {
+            text-decoration: underline;
+            color: inherit;
+        }
+        
+        nav a:hover {
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        main {
+            padding: 20px;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 20px;
+        }
+        
+        .grid-item {
+            background-color: white;
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        .grid-item:hover {
+            background-color: black;
+            color: white;
+        }
+
+        /* Media Query para pantallas pequeñas */
+        @media (max-width: 600px) {
+            .grid-container {
+                grid-template-columns: 1fr; /* Una sola columna */
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -22,25 +92,23 @@
     <main>
         <section id="noticias"> 
             <h2>Noticias</h2>
-            <table>
-
-                <tr>
-                    <td>‘Robos del siglo’: los cinco asaltos millonarios que han impactado a Chile en una década</td>
-                    <td>General</td>
-                    <td> Al violento atraco el 16 de agosto a una sucursal de una empresa de transporte de valores en la ciudad de Rancagua, se suman otros hechos similares que han tenido variados desenlaces. Tres de ellos ocurrieron en el aeropuerto de Santiago
-                    </td>
-                </tr>
-                <tr>
-                    <td>La región del Biobío, al sur de Chile, se sumerge en la ciencia y las ideas</td>
-                    <td>General</td>
-                    <td>Este viernes en la ciudad de Concepción, a 500 kilómetros al sur de Santiago de Chile, el Festival Puerto de Ideas BioBío inaugura su tercera versión. El que se considera uno de los eventos de divulgación científica y más importantes de Latinoamérica tendrá, hasta el domingo 25, el foco puesto en el mar y la naturaleza con exposiciones de más de una decena de investigadores chilenos y extranjeros pertenecientes a diferentes disciplinas..</td>
-                </tr>
-                <tr>
-                    <td>Boric tras el fallo del Tribunal Supremo a favor de Maduro: “La dictadura de Venezuela no es la izquierda”</td>
-                    <td>General</td>
-                    <td>El mandatario ha señalado que “Chile no reconoce este falso triunfo autoproclamado de Maduro y compañía” y que “no hay duda que estamos frente a una dictadura que falsea elecciones”</td>
-                </tr>
-            </table>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>'Robos del siglo': los cinco asaltos millonarios que han impactado a Chile en una década</h3>
+                    <p>General</p>
+                    <p>Al violento atraco el 16 de agosto a una sucursal de una empresa de transporte de valores en la ciudad de Rancagua, se suman otros hechos similares que han tenido variados desenlaces. Tres de ellos ocurrieron en el aeropuerto de Santiago</p>
+                </div>
+                <div class="grid-item">
+                    <h3>La región del Biobío, al sur de Chile, se sumerge en la ciencia y las ideas</h3>
+                    <p>General</p>
+                    <p>Este viernes en la ciudad de Concepción, a 500 kilómetros al sur de Santiago de Chile, el Festival Puerto de Ideas BioBío inaugura su tercera versión. El que se considera uno de los eventos de divulgación científica y más importantes de Latinoamérica tendrá, hasta el domingo 25, el foco puesto en el mar y la naturaleza con exposiciones de más de una decena de investigadores chilenos y extranjeros pertenecientes a diferentes disciplinas.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Boric tras el fallo del Tribunal Supremo a favor de Maduro: "La dictadura de Venezuela no es la izquierda"</h3>
+                    <p>General</p>
+                    <p>El mandatario ha señalado que "Chile no reconoce este falso triunfo autoproclamado de Maduro y compañía" y que "no hay duda que estamos frente a una dictadura que falsea elecciones"</p>
+                </div>
+            </div>
             <video controls>
                 <source src="cnnintro.mp4" type="video/mp4">
                 Tu navegador no soporta el elemento de video.
@@ -53,70 +121,50 @@
 
         <section id="deportes">
             <h2>Deportes</h2>
-            <table>
-                <tr>
-                    <th>Tabla noticias de deporte</th>
-                    <th>Deporte</th>
-                    <th></th>
-                
-                    <tr>
-                        <td>Gobierno transfirió más de $ 1 millón para deportistas olímpicos ecuatorianos</td>
-                        <td>Deporte</td>
-                        <td>
-
-                            <div class="image-container">
-                                <img src="deportes1.avif" alt="Logo de El Faro" width="200">
-                            </div>
-                            Ministerio de Economía anunció la entrega de los premios económicos por las medallas recibidas en las Olimpiadas París 2024.
-                        </td>
-                    
-
-                        
-                    </tr>
-                    <tr>
-                        <td>Alegrías y penas del deporte</td>
-                        <td>Deporte</td>
-                        <td>
-
-                            Es menester que los ministerios, autoridades y demás gente involucrada en el ámbito deportivo hagan acopio y valoren estos triunfos....
-                            <div class="image-container">
-                                <img src="deportes2.png" alt="Logo de El Faro" width="200">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Imane Khelif, la cuestionada campeona olímpica en París 2024 por sus altos niveles de testosterona, muestra su lado femenino</td>
-                        <td>Deporte</td>
-                        <td>
-
-                            La pugilista argelina fue acusada falsamente de ser transgénero, tras su combate en cuartos de final contra la italiana Angela Carini.
-                            <div class="image-container">
-                                <img src="deportes3.png" alt="Logo de El Faro" width="200">
-                            </div>
-                        </td>
-                    </tr>
-            
-            </table>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>Gobierno transfirió más de $ 1 millón para deportistas olímpicos ecuatorianos</h3>
+                    <p>Deporte</p>
+                    <div class="image-container">
+                        <img src="deportes1.avif" alt="Logo de El Faro" width="200">
+                    </div>
+                    <p>Ministerio de Economía anunció la entrega de los premios económicos por las medallas recibidas en las Olimpiadas París 2024.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Alegrías y penas del deporte</h3>
+                    <p>Deporte</p>
+                    <p>Es menester que los ministerios, autoridades y demás gente involucrada en el ámbito deportivo hagan acopio y valoren estos triunfos...</p>
+                    <div class="image-container">
+                        <img src="deportes2.png" alt="Logo de El Faro" width="200">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <h3>Imane Khelif, la cuestionada campeona olímpica en París 2024 por sus altos niveles de testosterona, muestra su lado femenino</h3>
+                    <p>Deporte</p>
+                    <p>La pugilista argelina fue acusada falsamente de ser transgénero, tras su combate en cuartos de final contra la italiana Angela Carini.</p>
+                    <div class="image-container">
+                        <img src="deportes3.png" alt="Logo de El Faro" width="200">
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="negocios">
             <h2>Negocios</h2>
-            
-            <article>
-                <h3>Irlanda dona EUR 200.000 para reforzar los proyectos del STDF relacionados con la inocuidad alimentaria y el comercio en todo el mundo</h3>
-                <p>Irlanda aportará EUR 200.000 (aproximadamente CHF 190.000) al Fondo para la Aplicación de Normas y el Fomento del Comercio (STDF) a fin de apoyar sus iniciativas en curso para mejorar la inocuidad alimentaria y el comercio de productos agropecuarios a nivel mundial. Esta donación contribuirá a hacer avanzar los proyectos y programas del STDF destinados a mejorar el acceso a los mercados mundiales y regionales para las economías en desarrollo y los países menos adelantados (PMA).</p>
-            </article>
-            <img src="comercio1.png" alt="Logo de El Faro" width="200"
-            <article>
-                <h3>Se abre el plazo para la inscripción en el curso de la OMC sobre los aspectos del comercio electrónico relacionados con los servicios</h3>
-                <p>Se invita a los funcionarios gubernamentales de los Miembros de la OMC y los observadores ante la Organización que reúnan las condiciones necesarias para beneficiarse de las actividades de asistencia técnica a que, a más tardar el 30 de agosto, presenten sus solicitudes para participar en el Curso Temático sobre los Aspectos del Comercio Electrónico relacionados con los Servicios de 2024, que se celebrará del 12 al 15 de noviembre en la OMC.</p>
-            </article>
-            <img src="comercio2.png" alt="Logo de El Faro" width="200"
-            <article>
-                <h3>La Directora General Okonjo-Iweala da la bienvenida a las Comoras como 165º Miembro de la OMC</h3>
-                <p>Las Comoras se adhirieron a la OMC como 165º Miembro el 21 de agosto, tras haber negociado durante 17 años sus condiciones de adhesión con los Miembros de la OMC. Se trata del 10º país menos adelantado (PMA) que se adhiere a la OMC por vía de negociaciones. Las Comoras anunciaron asimismo su aceptación formal del Acuerdo sobre Subvenciones a la Pesca de la OMC..</p>
-            </article>
-            <img src="comercio3.png" alt="Logo de El Faro" width="200"
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>Irlanda dona EUR 200.000 para reforzar los proyectos del STDF relacionados con la inocuidad alimentaria y el comercio en todo el mundo</h3>
+                    <p>Irlanda aportará EUR 200.000 (aproximadamente CHF 190.000) al Fondo para la Aplicación de Normas y el Fomento del Comercio (STDF) a fin de apoyar sus iniciativas en curso para mejorar la inocuidad alimentaria y el comercio de productos agropecuarios a nivel mundial. Esta donación contribuirá a hacer avanzar los proyectos y programas del STDF destinados a mejorar el acceso a los mercados mundiales y regionales para las economías en desarrollo y los países menos adelantados (PMA).</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Se abre el plazo para la inscripción en el curso de la OMC sobre los aspectos del comercio electrónico relacionados con los servicios</h3>
+                    <p>Se invita a los funcionarios gubernamentales de los Miembros de la OMC y los observadores ante la Organización que reúnan las condiciones necesarias para beneficiarse de las actividades de asistencia técnica a que, a más tardar el 30 de agosto, presenten sus solicitudes para participar en el Curso Temático sobre los Aspectos del Comercio Electrónico relacionados con los Servicios de 2024, que se celebrará del 12 al 15 de noviembre en la OMC.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>La Directora General Okonjo-Iweala da la bienvenida a las Comoras como 165º Miembro de la OMC</h3>
+                    <p>Las Comoras se adhirieron a la OMC como 165º Miembro el 21 de agosto, tras haber negociado durante 17 años sus condiciones de adhesión con los Miembros de la OMC. Se trata del 10º país menos adelantado (PMA) que se adhiere a la OMC por vía de negociaciones. Las Comoras anunciaron asimismo su aceptación formal del Acuerdo sobre Subvenciones a la Pesca de la OMC.</p>
+                </div>
+            </div>
         </section>
     </main>
 
